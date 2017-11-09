@@ -17,6 +17,3 @@ keys/
 
 # compiled js
 dist/bundle.js
-
-# linting
-.eslintrc.json
