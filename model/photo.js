@@ -1,7 +1,7 @@
 const db = require('../db-orm');
 const Sequelize = require('sequelize');
 
-const Photo = db.define('photo', {
+const photoModel = db.define('photo', {
   id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -15,31 +15,38 @@ const Photo = db.define('photo', {
   }
 });
 
-// recreate table
-// (async () => await Photo.sync({force: true}))();
+class Photo {
+  constructor(label, url) {
+    this.label = label;
+    this.url = url;
+  }
 
-const add = async function (photo) {
-    await Photo.create(photo);
-}
+  // reset table (removes all data!)
+  // async createTable() { await photoModel.sync({force: true}) };
 
-const get = async function (n, from) {
-    const result = await Photo.findAll({
+  static async add(photo) {
+    await photoModel.create(photo);
+  }
+
+  static async get (n, from) {
+    const result = await photoModel.findAll({
       order: ['id'],
       offset: from,
       limit: n
     });
     const photos = result.map(p => p.toJSON());
     return photos;
-}
+  }
 
-const getRandom = async function (n) {
-    const result = await Photo.findOne({
+  static async getRandom(n) {
+    const result = await photoModel.findOne({
       order: [
         Sequelize.fn('random')
       ]
     });
 
     return result.toJSON();
+  }
 }
 
-module.exports = { add, get, getRandom };
+module.exports = Photo;
