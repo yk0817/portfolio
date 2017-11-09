@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# HTTPS server's key and certificate
+keys/
+
+# compiled js
+dist/bundle.js
+
+# linting
+.eslintrc.json

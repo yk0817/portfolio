@@ -1,0 +1,68 @@
+body {
+  font-family: Helvetica;
+  background-color: #eee;
+  margin: 0;
+  padding: 20px;
+}
+
+.App {
+  background: white;
+  border: 1px solid #ddd;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin: 0 50px;
+}
+
+input {
+  margin: 10px 0;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+}
+
+button {
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  white-space: pre-line;
+  margin-top: 10px;
+}
+
+.actions {
+  text-align: center;
+  width: 30%;
+  float: left;
+}
+
+.tiles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  clear: both;
+}
+
+.tile {
+  padding: 20px;
+}
+
+.tile img {
+    width: 150px;
+}
+
+.tile .label {
+    margin-top: 10px;
+    color: #555;
+}
