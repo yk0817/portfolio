@@ -4,7 +4,7 @@ A simple portfolio demo
 
 React.js, Node.js, Nginx, PostgreSQL, Sequelize, Webpack
 
-![alt text]()
+![alt text](https://raw.githubusercontent.com/devjsx/portfolio/master/screenshot.png)
 
 This demo requires Nginx reverse proxy installed (config included).
 Testing environment: Node v8.9, PostgreSQL 10
