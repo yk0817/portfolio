@@ -4,7 +4,7 @@ const mountRoutes = require('./routes');
 
 const app = express();
 
-// statically serve folder
+// statically serve a folder
 app.use('/', express.static(__dirname + '/dist'));
 
 // plug in router
